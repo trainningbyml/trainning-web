@@ -8,6 +8,41 @@
     <title>TRAINNING BY ML | Capacitación Continua</title>
     <link rel="icon" type="image/png" href="imagenes/favicon.png">
     <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        .video-marca {
+            padding: 56px 20px;
+            background: #ffffff;
+        }
+
+        .contenedor-video-marca {
+            width: min(1180px, 100%);
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #0b0b0b;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+        }
+
+        .video-marca-player {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .video-marca {
+                padding: 32px 14px;
+            }
+
+            .contenedor-video-marca {
+                border-radius: 12px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -228,7 +263,7 @@
                         <img src="imagenes/h2s.png"
                              alt="Curso H2S Sulfuro de Hidrógeno">
                         <div class="curso-contenido">
-<h3>H₂S – Sulfuro de Hidrógeno</h3>
+<h3>H₂S</h3>
                             <p>
                                 Reconocer los peligros asociados al H₂S y aplicar medidas de prevención, detección y respuesta ante una posible exposición.
                             </p>
@@ -612,7 +647,17 @@
         </section>
 
 
-        <section id="contacto" class="contacto">
+        
+    <section class="video-marca" aria-label="TRAINNING BY ML">
+        <div class="contenedor-video-marca">
+            <video class="video-marca-player" autoplay muted loop playsinline preload="auto">
+                <source src="videos/trainning-by-ml-logo.mp4" type="video/mp4">
+                Tu navegador no admite la reproducción de video HTML5.
+            </video>
+        </div>
+    </section>
+
+<section id="contacto" class="contacto">
 
             <div class="contenedor">
 
