@@ -817,6 +817,36 @@ a {
     color: #ff5a00;
 }
 
+
+.precio-principal-cotizacion {
+    justify-content: center;
+}
+
+.cotizacion-titulo {
+    margin: 0 0 18px;
+    max-width: 430px;
+    font-size: clamp(38px, 4.5vw, 64px);
+    line-height: 1.02;
+    letter-spacing: -1.8px;
+    color: #ffffff;
+}
+
+.cotizacion-descripcion {
+    margin: 0 0 20px;
+    max-width: 500px;
+    font-size: 16px !important;
+    line-height: 1.65;
+    color: #d4d4d4 !important;
+}
+
+.cotizacion-base {
+    max-width: 500px;
+}
+
+.cotizacion-base strong {
+    color: #ff5a00;
+}
+
 .precio-detalles {
     display: grid;
     grid-template-columns: 1fr 1fr;
