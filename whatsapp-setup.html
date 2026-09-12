@@ -55,6 +55,7 @@
 <body>
 
   <div class="contenedor">
+
     <h1>Configuración de WhatsApp</h1>
 
     <p>
@@ -71,21 +72,26 @@
     </button>
 
     <div id="estado"></div>
+
   </div>
 
 
   <script>
+
     window.fbAsyncInit = function () {
+
       FB.init({
         appId: '2152730142317094',
         cookie: true,
         xfbml: true,
         version: 'v25.0'
       });
+
     };
 
 
     (function (d, s, id) {
+
       var js;
       var fjs = d.getElementsByTagName(s)[0];
 
@@ -108,6 +114,7 @@
         'Abriendo configuración de WhatsApp...';
 
       FB.login(
+
         function (response) {
 
           console.log('Respuesta de Meta:', response);
@@ -121,15 +128,23 @@
 
             document.getElementById('estado').innerText =
               'El proceso fue cancelado o no pudo completarse.';
+
           }
 
         },
+
         {
           config_id: '1079230401492656',
           response_type: 'code',
-          override_default_response_type: true
+          override_default_response_type: true,
+
+          extras: {
+            sessionInfoVersion: '3'
+          }
         }
+
       );
+
     }
 
 
@@ -158,13 +173,15 @@
           } else if (data.event === 'CANCEL') {
 
             document.getElementById('estado').innerText =
-              'El registro fue cancelado.';
+              'El registro de WhatsApp fue cancelado.';
 
           } else if (data.event === 'ERROR') {
 
             document.getElementById('estado').innerText =
-              'Meta reportó un error durante el registro.';
+              'Meta reportó un error durante el registro de WhatsApp.';
+
           }
+
         }
 
       } catch (error) {
