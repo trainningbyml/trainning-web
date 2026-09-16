@@ -1461,6 +1461,47 @@ footer {
         padding: 24px;
     }
 
+    .campus-activo {
+        display: grid;
+        grid-template-columns: 6px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .campus-activo .futuro-linea {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        width: 6px;
+        min-width: 6px;
+        height: 100%;
+        min-height: 150px;
+    }
+
+    .campus-contenido {
+        grid-column: 2;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .campus-contenido strong {
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    .campus-contenido p {
+        width: 100%;
+        max-width: none;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .campus-boton {
+        grid-column: 2;
+        width: 100%;
+        white-space: normal;
+        text-align: center;
+        padding: 14px 18px;
+    }
+
     .futuro-linea {
         height: 100px;
     }
