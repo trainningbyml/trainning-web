@@ -31,26 +31,36 @@
       line-height: 1.7;
     }
 
+    /* ENCABEZADO */
     .header {
-      background: #111111;
+      background: #ffffff;
       border-bottom: 5px solid #ff5a00;
-      padding: 22px 20px;
+      padding: 25px 20px;
     }
 
     .header-content {
       max-width: 950px;
       margin: 0 auto;
       display: flex;
+      justify-content: center;
       align-items: center;
+    }
+
+    .logo-link {
+      display: inline-block;
+      text-align: center;
     }
 
     .logo {
       display: block;
-      max-width: 210px;
-      width: 100%;
+      width: auto;
+      max-width: 240px;
+      max-height: 180px;
       height: auto;
+      margin: 0 auto;
     }
 
+    /* CONTENIDO */
     .container {
       max-width: 950px;
       margin: 0 auto;
@@ -92,6 +102,7 @@
       text-decoration: underline;
     }
 
+    /* ELIMINACIÓN DE DATOS */
     .data-deletion {
       margin-top: 20px;
       padding: 24px;
@@ -104,6 +115,7 @@
       padding-left: 22px;
     }
 
+    /* CONTACTO */
     .contact-box {
       margin-top: 20px;
       padding: 20px;
@@ -111,6 +123,7 @@
       border-radius: 6px;
     }
 
+    /* PIE DE PÁGINA */
     .footer {
       background: #111111;
       color: #ffffff;
@@ -122,9 +135,15 @@
       color: #ff5a00;
     }
 
+    /* ADAPTACIÓN PARA CELULARES */
     @media (max-width: 600px) {
+      .header {
+        padding: 20px 15px;
+      }
+
       .logo {
-        max-width: 175px;
+        max-width: 190px;
+        max-height: 150px;
       }
 
       h1 {
@@ -144,12 +163,17 @@
 
 <body>
 
+  <!-- ENCABEZADO CON LOGO OFICIAL -->
   <header class="header">
     <div class="header-content">
-      <a href="https://trainningbyml.com/" aria-label="TRAINNING by ML - Inicio">
+      <a
+        href="https://trainningbyml.com/"
+        class="logo-link"
+        aria-label="TRAINNING by ML - Inicio"
+      >
         <img
           src="imagenes/logo-trainning.png"
-          alt="TRAINNING by ML"
+          alt="TRAINNING by ML - Capacitación Continua"
           class="logo"
         >
       </a>
@@ -309,6 +333,7 @@
       eliminación u oposición al tratamiento.
     </p>
 
+    <!-- ESTA SECCIÓN NOS SERVIRÁ PARA META -->
     <h2 id="eliminacion-de-datos">9. Eliminación de datos de usuario</h2>
 
     <p>
@@ -335,22 +360,22 @@
         </li>
 
         <li>
-          Indique en el mensaje la información necesaria para identificar la
-          solicitud o la interacción relacionada con TRAINNING by ML.
+          Indique en el mensaje la información necesaria para identificar
+          la solicitud o la interacción relacionada con TRAINNING by ML.
         </li>
 
         <li>
           TRAINNING by ML revisará la solicitud y podrá requerir información
           razonablemente necesaria para verificar la identidad del solicitante
-          y evitar la eliminación no autorizada de información perteneciente a
-          terceros.
+          y evitar la eliminación no autorizada de información perteneciente
+          a terceros.
         </li>
 
         <li>
           Una vez validada la solicitud, se gestionará la eliminación de los
           datos que corresponda, salvo aquella información cuya conservación
-          sea necesaria para cumplir obligaciones legales, administrativas o
-          contractuales aplicables.
+          sea necesaria para cumplir obligaciones legales, administrativas
+          o contractuales aplicables.
         </li>
       </ol>
 
@@ -379,7 +404,7 @@
       <p>
         <strong>Sitio web:</strong><br>
         <a href="https://trainningbyml.com/">
-          https://trainningbyml.com/
+          trainningbyml.com
         </a>
       </p>
 
