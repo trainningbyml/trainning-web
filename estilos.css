@@ -723,6 +723,29 @@ a {
 }
 
 
+/* =========================
+   ACCESO AL CAMPUS VIRTUAL
+========================= */
+
+.campus-activo {
+    justify-content: space-between;
+}
+
+.campus-contenido {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.campus-contenido p {
+    max-width: 720px;
+}
+
+.campus-boton {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+
 
 /* =========================
    PRECIOS / PROPUESTA COMERCIAL
