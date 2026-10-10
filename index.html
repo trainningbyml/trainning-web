@@ -8,6 +8,7 @@
     <title>TRAINNING BY ML | Capacitación Continua</title>
     <link rel="icon" type="image/png" href="imagenes/favicon.png">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="experiencia-v2.css">
 
     <style>
         .video-marca {
@@ -61,7 +62,8 @@
                      class="logo">
             </a>
 
-            <nav class="menu">
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navegacion-principal"><span></span><span></span><span></span></button>
+            <nav class="menu" id="navegacion-principal">
                 <a href="#inicio">Inicio</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#cursos">Cursos</a>
@@ -229,9 +231,15 @@
                     petroleras e industriales.
                 </p>
 
-                <div class="cursos">
+                <div class="filtros-cursos" role="group" aria-label="Filtrar cursos">
+<button type="button" class="filtro activo" data-filtro="todos" aria-pressed="true">Todos los cursos</button>
+<button type="button" class="filtro" data-filtro="prevencion" aria-pressed="false">Prevención</button>
+<button type="button" class="filtro" data-filtro="operaciones" aria-pressed="false">Operaciones</button>
+<button type="button" class="filtro" data-filtro="emergencias" aria-pressed="false">Emergencias</button>
+</div><p class="resultado-cursos" aria-live="polite">8 programas disponibles</p>
+<div class="cursos">
 
-                    <article class="curso curso-imagen">
+                    <article class="curso curso-imagen" data-categoria="prevencion">
                         <img src="imagenes/manejo-defensivo.png"
                              alt="Curso de Manejo Defensivo">
                         <div class="curso-contenido">
@@ -239,10 +247,11 @@
                             <p>
                                 Desarrollar competencias para identificar peligros, anticiparse a situaciones de riesgo y aplicar técnicas de conducción preventiva y defensiva.
                             </p>
+                            <button type="button" class="curso-consultar" aria-label="Consultar este curso">Consultar programa <span aria-hidden="true">↗</span></button>
                         </div>
                     </article>
 
-                    <article class="curso curso-imagen">
+                    <article class="curso curso-imagen" data-categoria="prevencion">
                         <img src="imagenes/riesgos-laborales.png"
                              alt="Curso de Prevención de Riesgos Laborales">
                         <div class="curso-contenido">
@@ -250,10 +259,11 @@
                             <p>
                                 Fortalecer la capacidad para reconocer peligros, evaluar riesgos y aplicar controles preventivos en el entorno laboral.
                             </p>
+                            <button type="button" class="curso-consultar" aria-label="Consultar este curso">Consultar programa <span aria-hidden="true">↗</span></button>
                         </div>
                     </article>
 
-                    <article class="curso curso-imagen">
+                    <article class="curso curso-imagen" data-categoria="operaciones">
                         <img src="imagenes/rig-pass.png"
                              alt="Curso Rig Pass">
                         <div class="curso-contenido">
@@ -261,10 +271,11 @@
                             <p>
                                 Proporcionar conocimientos esenciales de seguridad para el ingreso y desempeño responsable en operaciones petroleras.
                             </p>
+                            <button type="button" class="curso-consultar" aria-label="Consultar este curso">Consultar programa <span aria-hidden="true">↗</span></button>
                         </div>
                     </article>
 
-                    <article class="curso curso-imagen">
+                    <article class="curso curso-imagen" data-categoria="prevencion">
                         <img src="imagenes/h2s.png"
                              alt="Curso H2S Sulfuro de Hidrógeno">
                         <div class="curso-contenido">
@@ -272,10 +283,11 @@
                             <p>
                                 Reconocer los peligros asociados al H₂S y aplicar medidas de prevención, detección y respuesta ante una posible exposición.
                             </p>
+                            <button type="button" class="curso-consultar" aria-label="Consultar este curso">Consultar programa <span aria-hidden="true">↗</span></button>
                         </div>
                     </article>
 
-                    <article class="curso curso-imagen">
+                    <article class="curso curso-imagen" data-categoria="operaciones">
                         <img src="imagenes/montacargas.png"
                              alt="Curso Manejo Seguro de Montacargas">
                         <div class="curso-contenido">
@@ -283,10 +295,11 @@
                             <p>
                                 Desarrollar competencias para inspeccionar, operar y maniobrar montacargas de forma segura, reduciendo riesgos para personas, equipos e instalaciones.
                             </p>
+                            <button type="button" class="curso-consultar" aria-label="Consultar este curso">Consultar programa <span aria-hidden="true">↗</span></button>
                         </div>
                     </article>
 
-                    <article class="curso curso-imagen">
+                    <article class="curso curso-imagen" data-categoria="emergencias">
                         <img src="imagenes/brigadas.png"
                              alt="Curso Brigadas de Emergencias">
                         <div class="curso-contenido">
@@ -294,10 +307,11 @@
                             <p>
                                 Preparar al participante para actuar de manera organizada y segura ante emergencias mediante procedimientos de respuesta, evacuación y control inicial.
                             </p>
+                            <button type="button" class="curso-consultar" aria-label="Consultar este curso">Consultar programa <span aria-hidden="true">↗</span></button>
                         </div>
                     </article>
 
-                    <article class="curso curso-imagen">
+                    <article class="curso curso-imagen" data-categoria="operaciones">
                         <img src="imagenes/espacios-confinados.png"
                              alt="Curso Trabajos en Espacios Confinados">
                         <div class="curso-contenido">
@@ -305,10 +319,11 @@
                             <p>
                                 Identificar riesgos, aplicar controles y ejecutar trabajos en espacios confinados bajo condiciones seguras.
                             </p>
+                            <button type="button" class="curso-consultar" aria-label="Consultar este curso">Consultar programa <span aria-hidden="true">↗</span></button>
                         </div>
                     </article>
 
-                    <article class="curso curso-imagen">
+                    <article class="curso curso-imagen" data-categoria="prevencion">
                         <img src="imagenes/trabajos-altura.png"
                              alt="Curso Prevención de Trabajos en Altura">
                         <div class="curso-contenido">
@@ -316,6 +331,7 @@
                             <p>
                                 Desarrollar criterios para prevenir caídas y utilizar correctamente sistemas de protección durante trabajos en altura.
                             </p>
+                            <button type="button" class="curso-consultar" aria-label="Consultar este curso">Consultar programa <span aria-hidden="true">↗</span></button>
                         </div>
                     </article>
 
@@ -570,6 +586,9 @@
         </section>
 
 
+<section class="cotizador-v2 seccion" id="cotizador" aria-labelledby="cotizador-titulo">
+<div class="contenedor cotizador-v2__grid"><div class="cotizador-v2__intro"><span class="subtitulo">EXPERIENCIA PERSONALIZADA</span><h2 id="cotizador-titulo">Tu próxima capacitación comienza aquí.</h2><p>Selecciona el programa y cuéntanos lo que necesitas. Prepararemos tu solicitud para enviarla por WhatsApp. No se generan precios automáticos.</p><div class="cotizador-v2__sello">01 / ELIGE TU PROGRAMA<br>02 / DEFINE LA MODALIDAD<br>03 / SOLICITA TU PROPUESTA</div></div>
+<form class="cotizador-v2__form" id="form-cotizador"><label for="v2-curso">Curso de capacitación</label><select id="v2-curso" required><option value="">Selecciona un curso</option><option>Manejo Defensivo</option><option>Prevención de Riesgos Laborales</option><option>Rig Pass</option><option>H₂S</option><option>Manejo Seguro de Montacargas</option><option>Brigadas de Emergencias</option><option>Trabajos en Espacios Confinados</option><option>Prevención de Trabajos en Altura</option></select><label for="v2-modalidad">Modalidad</label><select id="v2-modalidad" required><option>Virtual</option><option>Presencial In-Company</option></select><div class="cotizador-v2__campos"><div><label for="v2-participantes">Participantes</label><input id="v2-participantes" type="number" min="1" max="10000" value="1" required></div><div><label for="v2-ciudad">Ciudad o ubicación</label><input id="v2-ciudad" type="text" maxlength="100" placeholder="Ej. Coca" required></div></div><p class="cotizador-v2__nota">La cotización final depende del alcance y los requerimientos técnicos de la capacitación.</p><button class="cotizador-v2__enviar" type="submit">Preparar solicitud por WhatsApp <span aria-hidden="true">↗</span></button></form></div></section>
         <section id="respaldo" class="seccion seccion-gris">
 
             <div class="contenedor respaldo-contenido">
@@ -836,6 +855,7 @@
         </div>
 
     </footer>
+    <script src="experiencia-v2.js" defer></script>
 
 </body>
 
